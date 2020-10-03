@@ -7,6 +7,8 @@ function onReady(){
     console.log("hello from jquery");
     // add evnt listeners aka click events
     //get data to display
+
+    // event listener
     $('#Submit').on('click', buttonClicked);
 }
     
