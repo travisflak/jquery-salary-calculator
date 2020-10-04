@@ -8,8 +8,8 @@ $(document).ready(onReady);
 function onReady(){
     $('#Submit').on('click', buttonClicked); // event listener
 
-    //descendant selector
-    $('#formInformation').on('click', deleteFunc); // event listener
+    //descendant selector with future descendants
+    $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
 
 function deleteFunc(){
     console.log('delete');
