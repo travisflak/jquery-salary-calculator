@@ -23,11 +23,13 @@ function buttonClicked(){
     let ulFormInfo = $("#formInformation");
     
     for(let i=0; i < formInfo.length; i++){
-        ulFormInfo.append(`<li> ${formInfo[i]} <button class="submitBtn">DELETE</button></li>`);
-    }
-
-  
-    
+        ulFormInfo.append(`
+            <li> ${formInfo[i]} 
+                <button class="submitBtn">DELETE</button>
+                <button class="submitBtn">Change Color</button>
+            </li>`
+        );
+    } 
 }
 
 
