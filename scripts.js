@@ -5,16 +5,13 @@ let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
 // event #2 when the document is ready
 $(document).ready(onReady);
 
-
-
 function onReady(){
-    console.log("hello from jquery");
-    // add evnt listeners aka click events
-    //get data to display
+    $('#Submit').on('click', buttonClicked); // event listener
 
-    // event listener
-    $('#Submit').on('click', buttonClicked);
-    $("#formInformation").append('<li>Hello</li>');
+    let ulFormInfo = $("#formInformation");
+    ulFormInfo.append('<li>' + formInfo[0] + '</li>');
+    ulFormInfo.append('<li>Hello</li>');
+    ulFormInfo.append('<li>Hello</li>');
 }
     
 function buttonClicked(){
