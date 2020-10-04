@@ -1,7 +1,7 @@
 console.log("hello from js");
 let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
 
-let empFirstName = [];
+let empInfo = [];
 
 // event #2 when the document is ready
 $(document).ready(onReady);
@@ -18,17 +18,24 @@ function onReady(){
 }
 
 function submitForm(){
-    console.log('submitted! jk nothing has happened yet');
     //this is where I want to grab input values;
     //getter .val();
     //setter .val('something');
 
     let firstName = $('#firstName').val();
-    console.log('First Name: ', firstName);
 
-    empFirstName.push(firstName);
+    let lastName = $('#lastName').val();
+
+    //create a 1 time use object with the values from the inputs firstName and lastName
+    let newEmpInfo = {
+    firstNameKey: firstName,
+    lastNameKey: lastName,
+}
+
+    empInfo.push(newEmpInfo);
     
     $('#firstName').val('');
+    $('#lastName').val('');
 
 
 
