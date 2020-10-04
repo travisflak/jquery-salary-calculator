@@ -7,6 +7,7 @@ $(document).ready(onReady);
 
 function onReady(){
     $('#Submit').on('click', buttonClicked); // event listener
+    $('#submitForm').on('click', submitForm); // event listener
 
     //descendant selector with future descendants
     $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
@@ -14,6 +15,11 @@ function onReady(){
     $('#formInformation').on('click', '.changeColor', changeColor); // event listener
 
 }
+
+function submitForm(){
+    
+}
+
 
 function deleteFunc(){
     console.log('delete');
