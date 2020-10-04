@@ -11,7 +11,7 @@ function onReady(){
     let ulFormInfo = $("#formInformation");
 
     for(let i=0; i < formInfo.length; i++){
-        ulFormInfo.append('<li>' + formInfo[i] + '</li>');
+        ulFormInfo.append(`<li> ${formInfo[i]} </li>`);
     }
 
 }
