@@ -9,11 +9,11 @@ function onReady(){
     $('#Submit').on('click', buttonClicked); // event listener
 
     let ulFormInfo = $("#formInformation");
-    ulFormInfo.append('<li>' + formInfo[0] + '</li>');
-    ulFormInfo.append('<li>' + formInfo[1] + '</li>');
-    ulFormInfo.append('<li>' + formInfo[2] + '</li>');
-    ulFormInfo.append('<li>' + formInfo[3] + '</li>');
-    ulFormInfo.append('<li>' + formInfo[4] + '</li>');
+
+    for(let i=0; i < formInfo.length; i++){
+        ulFormInfo.append('<li>' + formInfo[i] + '</li>');
+    }
+
 }
     
 function buttonClicked(){
