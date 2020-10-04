@@ -11,7 +11,7 @@ function onReady(){
     //descendant selector with future descendants
     $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
 
-    $('#formInformation').on('click', '.submitBtn', changeColor); // event listener
+    $('#formInformation').on('click', '.changeColor', changeColor); // event listener
 
 }
 
@@ -28,14 +28,14 @@ function buttonClicked(){
         ulFormInfo.append(`
             <li> ${formInfo[i]} 
                 <button class="submitBtn">DELETE</button>
-                <button class="submitBtn">Change Color</button>
+                <button class="changeColor">Change Color</button>
             </li>`
         );
     } 
 }
 
-function changeColor (){
-    console.log('hello from changeColor');
+function changeColor(){
+    $(this).parent().addClass('pinkColor');
 
 }
 
