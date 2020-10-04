@@ -1,6 +1,7 @@
 console.log("hello from js");
 let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
 
+let empFirstName = [];
 
 // event #2 when the document is ready
 $(document).ready(onReady);
@@ -24,6 +25,8 @@ function submitForm(){
 
     let firstName = $('#firstName').val();
     console.log('First Name: ', firstName);
+
+    empFirstName.push(firstName);
     
     $('#firstName').val('');
 
