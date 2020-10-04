@@ -14,11 +14,11 @@ function onReady(){
         ulFormInfo.append(`<li> ${formInfo[i]} <button class="submitBtn">DELETE<button></li>`);
     }
 
-    $('.submitBtn').on('click', deleteFunc);
+    $('.submitBtn').on('click', deleteFunc); // event listener
 
 function deleteFunc(){
     console.log('delete');
-    $(this).remove();
+    $(this).parent().remove();
     
 }
 
