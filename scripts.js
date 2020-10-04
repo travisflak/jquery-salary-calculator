@@ -11,14 +11,16 @@ function onReady(){
     //descendant selector with future descendants
     $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
 
+    $('#formInformation').on('click', '.submitBtn', changeColor); // event listener
+
+}
+
 function deleteFunc(){
     console.log('delete');
     $(this).parent().remove();
     
 }
 
-}
-    
 function buttonClicked(){
     let ulFormInfo = $("#formInformation");
     
@@ -30,6 +32,11 @@ function buttonClicked(){
             </li>`
         );
     } 
+}
+
+function changeColor (){
+    console.log('hello from changeColor');
+
 }
 
 
