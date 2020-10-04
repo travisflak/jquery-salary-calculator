@@ -17,7 +17,18 @@ function onReady(){
 }
 
 function submitForm(){
+    console.log('submitted! jk nothing has happened yet');
+    //this is where I want to grab input values;
+    //getter .val()
+
+    let firstName = $('#firstName').val();
+
+    console.log('First Name: ', firstName);
     
+    
+
+
+
 }
 
 
