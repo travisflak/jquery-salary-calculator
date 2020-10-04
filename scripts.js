@@ -35,7 +35,7 @@ function buttonClicked(){
 }
 
 function changeColor(){
-    $(this).parent().addClass('pinkColor');
+    $(this).parent().toggleClass('pinkColor');
 
 }
 
