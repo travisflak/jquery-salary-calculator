@@ -90,7 +90,7 @@ function calculateTable(salary){
     //take that sum and get the monthly total salary and devide by 12
     //display on DOM
     $('#totalSalary').empty();
-    $('#totalSalary').append(`monthly salary: $${monthlyNumber}`);
+    $('#totalSalary').append(`Monthly Salary: $${monthlyNumber}`);
 
     if(monthlyNumber > 20000){
         $('#totalSalary').addClass('redColor');

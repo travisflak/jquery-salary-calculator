@@ -5,3 +5,33 @@
 table, th, td, tr{
     border: 1px solid black;
 }
+
+h1{
+    text-align: center;
+    background-color: #88CB9A;
+}
+
+div{
+    margin: 20px;
+}
+
+main{
+    background-color: #EEF6F0;
+}
+
+table{
+    margin: 20px;
+}
+
+h2{
+    margin: 20px;
+    text-align: center;
+}
+
+td{
+    background-color: white;
+}
+
+button{
+    background-color: #9CFF95;
+}
