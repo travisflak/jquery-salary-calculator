@@ -26,16 +26,30 @@ function submitForm(){
 
     let lastName = $('#lastName').val();
 
+    let empID = $('#empID').val();
+
+    let jobTitle = $('#jobTitle').val();
+
+    let annualSalary = $('#annualSalary').val();
+
     //create a 1 time use object with the values from the inputs firstName and lastName
     let newEmpInfo = {
     firstNameKey: firstName,
     lastNameKey: lastName,
+    empIDKey: empID,
+    jobTitleKey: jobTitle,
+    annualSalaryKey: annualSalary,
+
 }
 
     empInfo.push(newEmpInfo);
     
     $('#firstName').val('');
     $('#lastName').val('');
+    $('#empID').val('');
+    $('#jobTitle').val('');
+    $('#annualSalary').val('');
+
 
 
 
@@ -50,7 +64,7 @@ function deleteFunc(){
 
 function buttonClicked(){
     let ulFormInfo = $("#formInformation");
-    
+
     for(let i=0; i < formInfo.length; i++){
         ulFormInfo.append(`
             <li> ${formInfo[i]} 
