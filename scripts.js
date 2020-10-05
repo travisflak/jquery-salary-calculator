@@ -1,9 +1,9 @@
 console.log("hello from js");
 // let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
 
-let empInfo = [];
+let empInfo = [];//global array
 
-let yearlySalary = 0;
+let yearlySalary = 0;//global array
 
 // event #2 when the document is ready
 $(document).ready(onReady);
@@ -49,6 +49,7 @@ function submitForm(){
 
     empInfo.push(newEmpInfo);
     
+    //emptying input values
     $('#firstName').val('');
     $('#lastName').val('');
     $('#empID').val('');
@@ -68,7 +69,7 @@ function deleteFunc(){
 function buttonClicked(){
     let ulFormInfo = $("#nameInput");
     $('#nameInput').empty();
-    for(let i=0; i < empInfo.length; i++){
+    for(let i=0; i < empInfo.length; i++){//for loop
         ulFormInfo.append(`
             <tr> 
                 <td>${empInfo[i].firstNameKey}</td>
@@ -92,8 +93,8 @@ function calculateTable(salary){
     $('#totalSalary').empty();
     $('#totalSalary').append(`Monthly Salary: $${monthlyNumber}`);
 
-    if(monthlyNumber > 20000){
-        $('#totalSalary').addClass('redColor');
+    if(monthlyNumber > 20000){//if statement
+        $('#totalSalary').addClass('redColor');//string interpolation
     }
 }
 
