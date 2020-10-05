@@ -3,6 +3,8 @@ console.log("hello from js");
 
 let empInfo = [];
 
+let yearlySalary = 0;
+
 // event #2 when the document is ready
 $(document).ready(onReady);
 
@@ -31,6 +33,8 @@ function submitForm(){
     let jobTitle = $('#jobTitle').val();
 
     let annualSalary = $('#annualSalary').val();
+
+    calculateTable(annualSalary);
 
     //create a 1 time use object with the values from the inputs firstName and lastName
     let newEmpInfo = {
@@ -79,8 +83,18 @@ function buttonClicked(){
 }
 
 // calculate monthly costs and append this to the to DOM
-function calculateTable(){
-    
+function calculateTable(salary){
+    //add salaries for each employee
+    let salaryNumber = Number(salary);
+    let monthlyNumber = salaryNumber / 12;
+    //take that sum and get the monthly total salary and devide by 12
+    //display on DOM
+    $('#totalSalary').empty();
+    $('#totalSalary').append(`monthly salary: $${monthlyNumber}`);
+
+    if(monthlyNumber > 20000){
+        $('#totalSalary').addClass('redColor');
+    }
 }
 
 // function changeColor(){

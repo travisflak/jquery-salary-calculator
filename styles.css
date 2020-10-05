@@ -1,3 +1,7 @@
-.pinkColor{
-    background-color: pink;
+.redColor{
+    background-color: red;
+}
+
+table, th, td, tr{
+    border: 1px solid black;
 }
