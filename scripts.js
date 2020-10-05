@@ -1,5 +1,5 @@
 console.log("hello from js");
-let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
+// let formInfo = ["First Name", "Last Name", "ID", "Title", "Annual Salary"];
 
 let empInfo = [];
 
@@ -7,13 +7,13 @@ let empInfo = [];
 $(document).ready(onReady);
 
 function onReady(){
-    $('#Submit').on('click', buttonClicked); // event listener
     $('#submitForm').on('click', submitForm); // event listener
 
-    //descendant selector with future descendants
-    $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
 
-    $('#formInformation').on('click', '.changeColor', changeColor); // event listener
+    //descendant selector with future descendants
+    // $('#formInformation').on('click', '.submitBtn', deleteFunc); // event listener
+
+    // $('#formInformation').on('click', '.changeColor', changeColor); // event listener
 
 }
 
@@ -34,13 +34,14 @@ function submitForm(){
 
     //create a 1 time use object with the values from the inputs firstName and lastName
     let newEmpInfo = {
-    firstNameKey: firstName,
-    lastNameKey: lastName,
-    empIDKey: empID,
-    jobTitleKey: jobTitle,
-    annualSalaryKey: annualSalary,
 
-}
+        firstNameKey: firstName,
+        lastNameKey: lastName,
+        empIDKey: empID,
+        jobTitleKey: jobTitle,
+        annualSalaryKey: annualSalary,
+
+    }
 
     empInfo.push(newEmpInfo);
     
@@ -50,9 +51,7 @@ function submitForm(){
     $('#jobTitle').val('');
     $('#annualSalary').val('');
 
-
-
-
+    buttonClicked();
 }
 
 
@@ -63,22 +62,31 @@ function deleteFunc(){
 }
 
 function buttonClicked(){
-    let ulFormInfo = $("#formInformation");
-
-    for(let i=0; i < formInfo.length; i++){
+    let ulFormInfo = $("#nameInput");
+    $('#nameInput').empty();
+    for(let i=0; i < empInfo.length; i++){
         ulFormInfo.append(`
-            <li> ${formInfo[i]} 
-                <button class="submitBtn">DELETE</button>
-                <button class="changeColor">Change Color</button>
-            </li>`
-        );
+            <tr> 
+                <td>${empInfo[i].firstNameKey}</td>
+                <td>${empInfo[i].lastNameKey}</td>
+                <td>${empInfo[i].empIDKey}</td>
+                <td>${empInfo[i].jobTitleKey}</td>
+                <td>${empInfo[i].annualSalaryKey}</td>
+                <td><button class="deleteBtn">DELETE</button></td>
+            </tr>
+        `)
     } 
 }
 
-function changeColor(){
-    $(this).parent().toggleClass('pinkColor');
-
+// calculate monthly costs and append this to the to DOM
+function calculateTable(){
+    
 }
+
+// function changeColor(){
+//     $(this).parent().toggleClass('pinkColor');
+
+//}
 
 
 // evntt #1
