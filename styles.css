@@ -35,3 +35,12 @@ td{
 button{
     background-color: #9CFF95;
 }
+
+thead{
+    font-style: italic;
+    background-color: #F6EFFF;
+}
+
+tr{
+    padding: 10px;
+}
